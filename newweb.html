@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Find your Dream College</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='finaid.css'>
+  <script src='finaid.js'></script>
+  <script>
+    function show(shown, hidden) {
+      document.getElementById(shown).style.display='block';
+      document.getElementById(hidden).style.display='none';
+      return false;
+    }
+    </script>
+</head>
+<body>
+
+
+
+    
+
+        
+    <div id="Page1">
+
+        <div id="titcont">
+            <h1 id="maintitle" style="opacity: 1; transform: translateX(0vw) translateZ(0px);">
+                <span>Find Your</span>
+                <span>Dream College!</span>
+            </h1>
+        </div>
+        <div>
+          <a href=>
+
+              
+          </a>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+
+
+    
+        <div class="filter-containter" id="location-container">
+
+            <div class="costtextstyle" id="location">
+                <h3 id="step1" > 
+                    Step 1:
+                </h3>
+                <!-- <input class="input" id="state" type="text" placeholder="Enter State"> -->
+
+                <div>
+
+                    <p id="statedist" class="intext">Enter a State or Distance From Home</p>
+                    
+                    <input class="input" id="state" list="choose-state" type="search" placeholder="Enter State: NY">
+                    <datalist class="dropdown" id="choose-state">
+                        <option value="AL"></option>
+                        <option value="AK"></option>
+                        <option value="AL"></option>
+                        <option value="AZ"></option>
+                        <option value="AR"></option>
+                        <option value="CA"></option>
+                        <option value="CO"></option>
+                        <option value="CT"></option>
+                        <option value="DE"></option>
+                        <option value="FL"></option>
+                        <option value="GA"></option>
+                        <option value="HI"></option>
+                        <option value="ID"></option>
+                        <option value="IL"></option>
+                        <option value="IN"></option>
+                        <option value="IA"></option>
+                        <option value="KS"></option>
+                        <option value="KY"></option>
+                        <option value="LA"></option>
+                        <option value="ME"></option>
+                        <option value="MD"></option>
+                        <option value="MA"></option>
+                        <option value="MI"></option>
+                        <option value="MN"></option>
+                        <option value="MS"></option>
+                        <option value="MO"></option>
+                        <option value="MT"></option>
+                        <option value="NE"></option>
+                        <option value="NV"></option>
+                        <option value="NH"></option>
+                        <option value="NJ"></option>
+                        <option value="NY"></option>
+                        <option value="NC"></option>
+                        <option value="ND"></option>
+                        <option value="OH"></option>
+                        <option value="OK"></option>
+                        <option value="OR"></option>
+                        <option value="PA"></option>
+                        <option value="RI"></option>
+                        <option value="AL"></option>
+                        <option value="SC"></option>
+                        <option value="SD"></option>
+                        <option value="TN"></option>
+                        <option value="TX"></option>
+                        <option value="UT"></option>
+                        <option value="VT"></option>
+                        <option value="VA"></option>
+                        <option value="WA"></option>
+                        <option value="WV"></option>
+                        <option value="WI"></option>
+                        <option value="WY"></option>
+                    </datalist>
+                </div>
+                
+
+                <!-- <p class="intext">Enter Zip Code and Distance</p> -->
+                    <p id="or" >or</p>
+                    <input class="input" id="zpcode" type="text" placeholder="Enter Zip Code">
+                    <input class="input" id="rg" type="text" placeholder="Distance from Home">
+            </div>
+
+        </div>
+
+
+        <div class="filter-containter" id="life-container">
+            <div class="costtextstyle">
+                <h3 id="step2" class="steps">
+                    Step 2:
+                </h3>
+                
+
+                <div>
+                    <p class="intext">Enter Desired Size and Enviroment</p>
+                    <input class="input" id="size" list="hosting-plan" type="text" placeholder="Size">
+ 
+                    <datalist class="dropdown" id="hosting-plan">
+                        <option value="small"></option>
+                        <option value="medium"></option>
+                        <option value="large"></option>
+                    </datalist>
+
+                </div>
+
+                <div>
+                    <!-- <p class="intext">Desired Enviroment</p> -->
+                    <input class="input" id="env" list="hosting-plan1" type="text" placeholder="Enviroment">
+ 
+                    <datalist class="dropdown" id="hosting-plan1">
+                        <option value="urban"></option>
+                        <option value="suburban"></option>
+                        <option value="rural"></option>
+                    </datalist>
+
+                </div>
+                
+
+                <!-- <p id="camplife"> 
+                    <span>What Size</span>
+                    <span>would you Like</span>
+                </p> -->
+                <!-- <input class="input" id="size" type="text" placeholder="Size..."> -->
+        
+                <!-- <label id="camplife"> 
+                    Envrioment
+                </label><br> -->
+                <!-- <input class="input" id="env" type="text" placeholder="Enviroment... "> -->
+
+            </div>
+        </div>
+
+        <div class="filter-containter" id="type-container">
+
+          <div class="costtextstyle" id="collegetypelabel">
+              <h3 id="step3" class="steps"> 
+                  Step 3:
+              </h3><br>
+              
+          </div>
+      
+          <div class="costtextstyle" id="privateradio"> 
+
+            <label class="radio-button">
+                <input id="pubradio" type="radio" name="ctype" checked="checked">
+                <span class="label-visible">
+                  <span class="fake-radiobutton"></span>
+                  Public
+                </span>
+              </label>
+              
+              <label class="radio-button">
+                <input id="privradio" type="radio" name="ctype">
+                <span class="label-visible">
+                  <span class="fake-radiobutton"></span>
+                  Private 
+                </span>
+              </label>
+              
+              
+              <!-- <input class="radio" id="pubradio" type="radio" name="ctype">
+              <label for="html">Public</label>
+              <input class="radio" id="privradio" type="radio" name="ctype">
+              <label for="html">Private</label> -->
+
+          </div>
+  
+          <div class="costtextstyle" id="publicradio">
+            
+            <label class="radio-button">
+                <input id="fouryradio" type="radio" name="yrtype" checked="checked">
+                <span class="label-visible">
+                  <span id="degree4" class="fake-radiobutton"></span>
+                  4 Year Degree
+                </span>
+            </label>
+              
+            <label class="radio-button">
+                <input id="4yradio" type="radio" name="yrtype">
+                <span class="label-visible">
+                  <span class="fake-radiobutton"></span>
+                  2 Year Degree
+                </span>
+            </label>
+              
+              
+              <!-- <input class="radio" id="2yradio" type="radio" name="yrtype">
+              <label for="html">2 Years</label>
+              <input class="radio" id="fouryradio" type="radio" name="yrtype">
+              <label for="html">4 Years</label> -->
+          </div>
+  
+        </div>
+            
+
+
+        <div class="filter-containter" id="cost-container">
+          
+          <div class="costtextstyle">
+              
+            <h3 id="laststep" class="steps">
+                Last Step:
+            </h3>
+            
+            <p id="onlyfull" class="intext">
+                Display only Full Need Met schools?
+            <p>
+  
+              <!-- <input class="need" id="yesneedmet" type="radio" name="needmet">
+              <label for="html">Yes</label>
+              <input class="need" id="fouryradio" type="radio" name="needmet">
+              <label for="html">No</label> -->
+
+            <div id="fullneed">
+              <label class="radio-button">
+                <input id="yesneedmet" type="radio" name="radio" checked="checked">
+                <span class="label-visible">
+                  <span class="fake-radiobutton"></span>
+                  Yes
+                </span>
+              </label>
+              
+              <label class="radio-button">
+                <input type="radio" name="radio">
+                <span class="label-visible">
+                  <span class="fake-radiobutton"></span>
+                  No
+                </span>
+              </label>
+            </div>
+              
+  
+          </div>
+
+        </div>
+        
+        <div>
+            
+            <a href="#" onclick="return show('Page2','Page1');">
+                <button id="button" type="submit">
+                    Search!
+                </button></a>
+
+        </div>
+
+
+
+
+    </div>
+
+        
+    <div id="Page2" style="display:none" >
+        
+
+        <div id="collegeresults">
+
+            <div id="page2title">
+                Your Results!
+
+            </div>
+        </div>
+
+
+
+        <div>
+            <button onClick="window.location.reload();" id="back"type="submit">
+                Change My Preferences!
+            </button></a>
+        </div>  
+
+    </div>  
+
+        
+    </body>
+    </html>
+
+</body>
+</html>
