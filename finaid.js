@@ -153,7 +153,13 @@ const grandFunc = async (subset) => {
                 sat.setAttribute("id", "sat");
                 const website = document.createElement("p")
                 website.setAttribute("id", "website");
-                website.append("Website: ", data.website)
+                if (data.website.length > 25) {
+
+                    var trimmed = data.website.toString().substring(0, 25);
+                    website.append("Website: ", trimmed)
+                } else {
+                    website.append("Website: ", data.website)
+                }
                 info.append(website)
                 newDiv.append(info)
                 const divpic = document.createElement("div")
@@ -210,8 +216,12 @@ const grandFunc = async (subset) => {
                 sat.setAttribute("id", "sat");
                 const website = document.createElement("p")
                 website.setAttribute("id", "website");
-                website.append("Website: ", data.website)
-                info.append(website)
+                if (data.website.length > 25) {
+                    var trimmed = data.website.toString().substring(0, 25);
+                    website.append("Website: ", trimmed)
+                } else {
+                    website.append("Website: ", data.website)
+                }                info.append(website)
                 newDiv.append(info)
                 const divpic = document.createElement("div")
                 var img = new Image(350,220);
@@ -272,7 +282,12 @@ const grandFunc = async (subset) => {
                 sat.setAttribute("id", "sat");
                 const website = document.createElement("p")
                 website.setAttribute("id", "website");
-                website.append("Website: ", data.website)
+                if (data.website.length > 25) {
+                    var trimmed = data.website.toString().substring(0, 25);
+                    website.append("Website: ", trimmed)
+                } else {
+                    website.append("Website: ", data.website)
+                }
                 info.append(website)
                 newDiv.append(info)
                 const divpic = document.createElement("div")
@@ -327,7 +342,12 @@ const grandFunc = async (subset) => {
                 sat.setAttribute("id", "sat");
                 const website = document.createElement("p")
                 website.setAttribute("id", "website");
-                website.append("Website: ", data.website)
+                if (data.website.length > 25) {
+                    var trimmed = data.website.toString().substring(0, 25);
+                    website.append("Website: ", trimmed)
+                } else {
+                    website.append("Website: ", data.website)
+                }
                 info.append(website)
                 newDiv.append(info)
                 const divpic = document.createElement("div")
